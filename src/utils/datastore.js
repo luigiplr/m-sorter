@@ -12,7 +12,7 @@ import { sync as mkdirp } from 'mkdirp'
 class datastore extends nedb {
   constructor(datastorePath, log, callback) {
     super({
-      filename: path.join(datastorePath, 'v-sorter.db'),
+      filename: path.join(datastorePath, 'm-sorter.db'),
       timestampData: true,
       autoload: true,
       onload: err => this._onLoaded(err, callback)
