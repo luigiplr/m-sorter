@@ -1,0 +1,40 @@
+{
+  "name": "m-sorter",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "Luigi Poole",
+    "email": "luigi@violently.sexy"
+  },
+  "scripts": {
+    "babel": "babel src -d build"
+  },
+  "engines": {
+    "node": ">= 5.10.x"
+  },
+  "main": "build/index.js",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "async": "^1.5.0",
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.10.6",
+    "rimraf": "^2.5.2",
+    "nedb": "^1.8.0",
+    "recursive-readdir": "^2.0.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.5",
+    "babel-preset-node5": "^11.0.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.7.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-develop-server": "^0.5.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.1.5"
+  }
+}
