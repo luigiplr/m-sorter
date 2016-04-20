@@ -5,13 +5,16 @@ import config from './config'
 import datastore from './utils/datastore'
 import path from 'path'
 
-const [log, db] = [new logging(config), new datastore(config)]
+const log = new logging(config)
 
 class vSorter {
   constructor() {
     log.verbose('Starting m-sorter')
 
-    this.verifyConfig().then(::this.verifyFolderMapping).catch(log.error)
+    this.verifyConfig()
+      .then(() => datastore(config, log))
+      .then(::this.verifyFolderMapping)
+      .catch(log.error)
   }
 
   verifyFolderMapping() {
