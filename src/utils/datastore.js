@@ -17,6 +17,7 @@ class datastore extends nedb {
       autoload: true,
       onload: err => this._onLoaded(err, callback)
     })
+
     log.verbose('Loading Datastore')
     this.log = log
   }
